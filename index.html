@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Filter Product</title>
+</head>
+<body>
+    <section class="container">
+    <form>
+        <i class="ri-search-2-line ri-xl" id="ikn-s"></i>
+        <input type="search" placeholder="Cari Produk" class="search" id="searchbox" onkeyup="search()">
+    </form>
+
+    <div class="produk-list" id="list-produk">
+        <!-- <div class="grid"> -->
+
+        <div class="produk-atas" id="produk">
+            <img src="shop/1.jpg" alt="">
+            <div class="detail">
+                <h2>Tshirt Blue Ocean</h2>
+                <p>29.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-atas" id="produk">
+            <img src="shop/2.jpg" alt="">
+            <div class="detail">
+                <h2> White Black Sneaker</h2>
+                <p>19.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-atas" id="produk">
+            <img src="shop/3.jpg" alt="">
+            <div class="detail">
+                <h2>woman's blue bag</h2>
+                <p>39.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-atas"  id="produk">
+            <img src="shop/4.jpg" alt="">
+            <div class="detail">
+                <h2>Blue Ocean Sneaker</h2>
+                <p>29.49$</p>
+            </div>
+        </div>
+
+        <div class="produk-tengah"  id="produk">
+            <img src="shop/5.jpg" alt="">
+            <div class="detail">
+                <h2>Man's Beanie white</h2>
+                <p>29.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-tengah"  id="produk">
+            <img src="shop/6.jpg" alt="">
+            <div class="detail">
+                <h2>Jacket red maroon</h2>
+                <p>42.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-tengah"  id="produk">
+            <img src="shop/7.jpg" alt="">
+            <div class="detail">
+                <h2>Blue Ocean Sneaker</h2>
+                <p>31.99$</p>
+            </div>
+        </div>
+        
+        <div class="produk-tengah"  id="produk">
+            <img src="shop/8.jpg" alt="">
+            <div class="detail">
+                <h2>Jacket Blue Ocean</h2>
+                <p>29.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-bawah"  id="produk">
+            <img src="shop/9.jpg" alt="">
+            <div class="detail">
+                <h2>
+                    shoulder bag</h2>
+                <p>40.99$</p>
+            </div>
+        </div>
+
+        <div class="produk-bawah"  id="produk">
+            <img src="shop/10.jpg" alt="">
+            <div class="detail">
+                <h2>watch brown</h2>
+                <p>29.99$</p>
+            </div>
+        </div>
+
+    <!-- </div> -->
+    </div>
+    </section>
+
+    <script>
+
+
+        function search() {
+            var searchbox = document.getElementById("searchbox");
+            var value_searchbox = searchbox.value.toUpperCase();
+            var produk = document.querySelectorAll("#produk");
+    
+    
+            for(var i = 0; i < produk.length; i++) {
+                var detail = produk[i].getElementsByClassName("detail") [0];
+                var h2 = detail.getElementsByTagName("h2")[0];
+                var txt_v= h2.textContent|| h2.innerText;
+    
+                if(txt_v.toUpperCase().indexOf(value_searchbox) > -1) {
+                    produk[i].style.display = "";
+                } else {
+                    produk[i].style.display = "none";
+                }
+              }
+            }
+    </script>
+
+
+</body>
+</html>

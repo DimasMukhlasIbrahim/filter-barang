@@ -1,0 +1,105 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* background-color: #e0d7d7; */
+}
+
+/* search */
+.container {
+}
+.container form {
+    text-align: center;
+    width:30%;
+    height: 3rem;
+    border: 1px solid black;
+    /* background-color: #e0d7d7; */
+    margin: 20px auto;
+    border-radius: 2rem;
+}
+
+.container form:hover {
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+.container form input {
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    height: 3rem;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    /* background-color: #e0d7d7; */
+}
+
+#ikn-s {
+    width: 20px;
+    height: 2rem;
+    width: 5rem;
+    cursor: pointer;
+}
+
+#ikn-s:hover {
+    opacity: 0.6;
+    transition-duration: 0.5s;
+}
+
+/* product */
+.produk-list {
+
+display: flex;
+flex-wrap: wrap;
+margin: 0 10vw;
+width: 100%;
+
+
+}
+
+
+
+.produk-list #produk {
+width: 42vh;
+margin: 0 3rem;
+text-align: center;
+}
+
+
+
+
+
+
+.produk-list .produk .detail {
+    line-height: 1px;
+    text-align: center;
+}
+
+/* Dekstop */
+@media (min-width: 1024px) {
+    /* Gaya CSS untuk tampilan dekstop */
+    
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Gaya CSS untuk tampilan tablet */
+    /* produk */
+    .produk-list {
+
+        margin: 0;
+        display: flex;
+        
+    }
+
+    .produk-list #produk {
+        background-color: brown;
+        width: 34%;
+        margin: 4rem auto;
+    }
+  }
+  
+  /* Handphone */
+  @media (max-width: 767px) {
+    /* Gaya CSS untuk tampilan handphone */
+  }
+  
